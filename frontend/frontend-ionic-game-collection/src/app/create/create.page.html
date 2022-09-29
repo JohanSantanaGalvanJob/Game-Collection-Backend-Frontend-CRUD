@@ -9,18 +9,23 @@
     <form [formGroup]="gameForm" (ngSubmit)="onSubmit()">
       <ion-item>
         <ion-label position="floating">Platform</ion-label>
-        <ion-input formControlName="platform" type="text" required></ion-input>
+        <ion-input  formControlName="platform" type="text" required></ion-input>
       </ion-item>
+
+      <!-- <ion-item>
+        <ion-label position="floating">Platform</ion-label>
+        <ion-input name="platform" [(ngModel)]="platform" type="text" required></ion-input>
+      </ion-item> -->
 
       <ion-item>
         <ion-label position="floating">Title</ion-label>
-        <ion-input formControlName="title" type="text" required>
+        <ion-input  formControlName="title" type="text" required>
         </ion-input>
       </ion-item>
 
       <ion-item>
         <ion-label position="floating">Description</ion-label>
-        <ion-input formControlName="description" type="text" required>
+        <ion-input  formControlName="description" type="text" required>
         </ion-input>
       </ion-item>
 
@@ -38,19 +43,19 @@
 
        <ion-item>
         <ion-label position="floating">Meta score</ion-label>
-        <ion-input formControlName="metaScore" type="text" required>
+        <ion-input  formControlName="metaScore" type="number" placeholder="Put only numbers" required>
         </ion-input>
       </ion-item>
 
       <ion-item>
         <ion-label position="floating">User Score</ion-label>
-        <ion-input formControlName="userScore" type="text" required>
+        <ion-input  formControlName="userScore" type="number" placeholder="Put only numbers" required>
         </ion-input>
       </ion-item>
 
       <ion-item>
         <ion-label position="floating">Release Date</ion-label>
-        <ion-input formControlName="releaseDate" type="text" required>
+        <ion-input formControlName="releaseDate" type="date" required>
         </ion-input>
       </ion-item>
 

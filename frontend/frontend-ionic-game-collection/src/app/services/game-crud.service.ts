@@ -1,20 +1,11 @@
 import { Injectable } from '@angular/core';
 
-import { HttpClient, HttpHeaders } from '@angular/common/http';
+import { HttpClient,HttpHeaders } from '@angular/common/http';
 import { Observable, of } from 'rxjs';
 import { catchError, tap } from 'rxjs/operators';
+import { Game } from '../model/game';
 
-export class Game {
-  _id: number;
-  platform: string;
-  title: string;
-  description: string;
-  genre: string;
-  thumbnailUrl: string;
-  metaScore:number;
-  userScore:number;
-  releaseDate:string;
-}
+
 
 @Injectable({
   providedIn: 'root'
@@ -24,14 +15,11 @@ export class GameCrudService {
 
   endpoint = 'http://localhost:8080/gameCollection';
 
-  httpOptions = {
-    headers: new HttpHeaders({ 'Content-Type': 'application/json' })
-  };
 
   constructor(private httpClient: HttpClient) { }
 
   createGame(game: Game): Observable<any> {
-    return this.httpClient.post<Game>(this.endpoint, JSON.stringify(game), this.httpOptions)
+    return this.httpClient.post<Game>(this.endpoint, game)
       .pipe(
         catchError(this.handleError<Game>('Error occured'))
       );
@@ -54,7 +42,7 @@ export class GameCrudService {
   }
 
   updateGame(id, game: Game): Observable<any> {
-    return this.httpClient.put(this.endpoint + '/' + id, JSON.stringify(game), this.httpOptions)
+    return this.httpClient.put(this.endpoint + '/' + id, game)
       .pipe(
         tap(_ => console.log(`Game updated: ${id}`)),
         catchError(this.handleError<Game[]>('Update game'))
@@ -62,7 +50,7 @@ export class GameCrudService {
   }
 
   deleteGame(id): Observable<Game[]> {
-    return this.httpClient.delete<Game[]>(this.endpoint + '/' + id, this.httpOptions)
+    return this.httpClient.delete<Game[]>(this.endpoint + '/' + id)
       .pipe(
         tap(_ => console.log(`Game deleted: ${id}`)),
         catchError(this.handleError<Game[]>('Delete game'))

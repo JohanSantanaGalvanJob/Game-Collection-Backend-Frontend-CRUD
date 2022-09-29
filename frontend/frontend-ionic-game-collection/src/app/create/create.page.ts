@@ -38,6 +38,7 @@ export class CreatePage implements OnInit {
     if (!this.gameForm.valid) {
       return false;
     } else {
+      console.log()
       this.gameCrudService.createGame(this.gameForm.value)
         .subscribe((response) => {
           this.zone.run(() => {

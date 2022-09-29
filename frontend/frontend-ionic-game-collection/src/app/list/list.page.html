@@ -6,17 +6,34 @@
 
 <ion-content>
 
-  <ion-list>
+  <ion-list class="game-list">
     <ion-item *ngFor="let game of Games">
       <ion-label>
-        <h2>{{game.platform}}</h2>
-        <h3>{{game.title}}</h3>
-        <h3>{{game.description}}</h3>
-        <h3>{{game.genre}}</h3>
-        <h3>{{game.thumbnailUrl}}</h3>
-        <h3>{{game.metaScore}}</h3>
-        <h3>{{game.userScore}}</h3>
-        <h3>{{game.releaseDate}}</h3>
+        <ion-grid>
+          <ion-row>
+            <ion-col>
+              <ion-img class="image" src={{game.thumbnailUrl}}></ion-img>
+              <h3>{{game.releaseDate}}</h3>
+            </ion-col>
+
+            <ion-col>
+              <p class="title">{{game.title}}</p>
+              <p class="platform">{{game.platform}}</p>
+
+
+              <ion-row>
+
+                <h3>{{game.description}}</h3>
+                <h3>{{game.genre}}</h3>
+
+                <h3>{{game.metaScore}}</h3>
+                <h3>{{game.userScore}}</h3>
+              </ion-row>
+
+            </ion-col>
+
+          </ion-row>
+        </ion-grid>
 
       </ion-label>
 

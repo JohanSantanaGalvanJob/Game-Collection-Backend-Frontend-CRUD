@@ -25,7 +25,7 @@ export class ListPage implements OnInit {
     })
   }
 
-  removeGame(game, i) {
+  removeGame(game) {
     if (window.confirm('Are you sure')) {
       this.gameCrudService.deleteGame(game.id)
       .subscribe(() => {
