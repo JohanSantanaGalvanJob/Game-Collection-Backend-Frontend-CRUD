@@ -5,7 +5,7 @@ import { FormsModule } from '@angular/forms';
 import { IonicModule } from '@ionic/angular';
 
 import { ListPageRoutingModule } from './list-routing.module';
-
+import {Ng2SearchPipeModule} from 'ng2-search-filter';
 import { ListPage } from './list.page';
 
 @NgModule({
@@ -13,7 +13,8 @@ import { ListPage } from './list.page';
     CommonModule,
     FormsModule,
     IonicModule,
-    ListPageRoutingModule
+    ListPageRoutingModule,
+    Ng2SearchPipeModule
   ],
   declarations: [ListPage]
 })

@@ -6,8 +6,10 @@
 
 <ion-content>
 
+  <ion-searchbar icon="search-outline" [(ngModel)]="searchGame" showCancelButton="focus" animated placeholder="Search your games here"></ion-searchbar>
+
   <ion-list class="game-list">
-    <ion-item *ngFor="let game of Games">
+    <ion-item *ngFor="let game of Games | filter:searchGame">
       <ion-label>
         <ion-grid>
           <ion-row class="title-platform-container">
@@ -46,6 +48,7 @@
 
 
           <ion-row class="buttons">
+            
 
             <ion-button color="success" clear [routerLink]="['/update/', game.id]">Update</ion-button>
             <ion-button color="danger" clear (click)="removeGame(game)">Delete</ion-button>

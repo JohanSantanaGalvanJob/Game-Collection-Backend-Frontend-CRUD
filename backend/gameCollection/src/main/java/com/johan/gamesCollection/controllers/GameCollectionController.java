@@ -32,12 +32,12 @@ public class GameCollectionController {
 	}
 
 	@PostMapping("/gameCollection")
-	public void post(@RequestBody GameCollection gameCollection) {
+	public void post( GameCollection gameCollection) {
 		gameCollectionService.post(gameCollection);
 	}
 
 	@PutMapping("/gameCollection/{id}")
-	public void put( @RequestBody GameCollection gameCollection, @PathVariable(value = "id") long id) {
+	public void put(  GameCollection gameCollection, @PathVariable(value = "id") long id) {
 		gameCollectionService.put(gameCollection, id);
 	}
 

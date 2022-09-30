@@ -11,6 +11,7 @@ import { Router } from '@angular/router';
 export class ListPage implements OnInit {
 
   Games: any = [];
+  searchGame:string;
 
   constructor( 
     private gameCrudService: GameCrudService,
@@ -22,6 +23,7 @@ export class ListPage implements OnInit {
   ionViewDidEnter() {
     this.gameCrudService.getGames().subscribe((response) => {
       this.Games = response;
+      
     })
   }
 

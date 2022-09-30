@@ -6,6 +6,10 @@ import { catchError, tap } from 'rxjs/operators';
 import { Game } from '../model/game';
 
 
+const httpOptionsUsingUrlEncoded={
+  headers: new HttpHeaders({ 'Content-Type': 'application/x-www-form-urlencoded'})
+}
+
 
 @Injectable({
   providedIn: 'root'
@@ -19,7 +23,16 @@ export class GameCrudService {
   constructor(private httpClient: HttpClient) { }
 
   createGame(game: Game): Observable<any> {
-    return this.httpClient.post<Game>(this.endpoint, game)
+    let data= new URLSearchParams();
+    data.append("title",game.title);
+    data.append("platform",game.platform);
+    data.append("description",game.description);
+    data.append("genre",game.genre);
+    data.append("thumbnailUrl",game.thumbnailUrl);
+    data.append("metaScore",game.metaScore.toString());
+    data.append("userScore",game.userScore.toString());
+    data.append("releaseDate",game.releaseDate);
+    return this.httpClient.post<Game>(this.endpoint, data,httpOptionsUsingUrlEncoded)
       .pipe(
         catchError(this.handleError<Game>('Error occured'))
       );
@@ -42,7 +55,16 @@ export class GameCrudService {
   }
 
   updateGame(id, game: Game): Observable<any> {
-    return this.httpClient.put(this.endpoint + '/' + id, game)
+    let data= new URLSearchParams();
+    data.append("title",game.title);
+    data.append("platform",game.platform);
+    data.append("description",game.description);
+    data.append("genre",game.genre);
+    data.append("thumbnailUrl",game.thumbnailUrl);
+    data.append("metaScore",game.metaScore.toString());
+    data.append("userScore",game.userScore.toString());
+    data.append("releaseDate",game.releaseDate);
+    return this.httpClient.put(this.endpoint + '/' + id, data,httpOptionsUsingUrlEncoded)
       .pipe(
         tap(_ => console.log(`Game updated: ${id}`)),
         catchError(this.handleError<Game[]>('Update game'))
