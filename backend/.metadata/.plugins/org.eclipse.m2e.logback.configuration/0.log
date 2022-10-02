@@ -97,3 +97,12 @@
 2022-10-01 18:42:43,880 [Worker-4: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered properties files.
 2022-10-01 18:42:43,880 [Worker-4: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\escritorio\clases\2 DAM\PGL\GameCollectionApp\backend\gameCollection\src\test\resources
 2022-10-01 18:46:35,471 [Worker-1: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is up-to-date. Trying to read.
+2022-10-02 10:52:06,537 [Worker-4: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is up-to-date. Trying to read.
+2022-10-02 19:46:36,972 [Worker-1: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is out-of-date. Trying to update.
+2022-10-02 20:09:20,048 [Worker-19: Launching gameCollection - GameCollectionApplication] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-10-02 20:09:20,049 [Worker-19: Launching gameCollection - GameCollectionApplication] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered properties files.
+2022-10-02 20:09:20,051 [Worker-19: Launching gameCollection - GameCollectionApplication] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2022-10-02 20:09:20,116 [Worker-19: Launching gameCollection - GameCollectionApplication] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2022-10-02 20:09:20,119 [Worker-19: Launching gameCollection - GameCollectionApplication] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-10-02 20:09:20,119 [Worker-19: Launching gameCollection - GameCollectionApplication] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered properties files.
+2022-10-02 20:09:20,119 [Worker-19: Launching gameCollection - GameCollectionApplication] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\escritorio\clases\2 DAM\PGL\GameCollectionApp\backend\gameCollection\src\test\resources
