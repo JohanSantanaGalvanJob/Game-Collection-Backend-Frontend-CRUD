@@ -106,3 +106,4 @@
 2022-10-02 20:09:20,119 [Worker-19: Launching gameCollection - GameCollectionApplication] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
 2022-10-02 20:09:20,119 [Worker-19: Launching gameCollection - GameCollectionApplication] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered properties files.
 2022-10-02 20:09:20,119 [Worker-19: Launching gameCollection - GameCollectionApplication] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\escritorio\clases\2 DAM\PGL\GameCollectionApp\backend\gameCollection\src\test\resources
+2022-10-02 20:11:48,380 [Worker-2: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is up-to-date. Trying to read.
